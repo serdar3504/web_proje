@@ -1,0 +1,191 @@
+## EXPIRES CACHING ##
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresByType image/jpg "access plus 1 year"
+ExpiresByType image/jpeg "access plus 1 year"
+ExpiresByType image/gif "access plus 1 year"
+ExpiresByType image/png "access plus 1 year"
+ExpiresByType text/css "access plus 1 month"
+ExpiresByType application/pdf "access plus 1 month"
+ExpiresByType text/x-javascript "access plus 1 month"
+ExpiresByType application/x-shockwave-flash "access plus 1 month"
+ExpiresByType image/x-icon "access plus 1 year"
+ExpiresDefault "access plus 7 days"
+</IfModule>
+
+
+<IfModule mod_mime.c>
+AddType font/opentype .otf
+AddType application/font-woff .woff
+AddType application/font-woff2 .woff2
+AddType application/x-font-ttf .ttf
+AddType application/vnd.ms-fontobject .eot
+AddType image/svg+xml .svg
+</IfModule>
+
+<IfModule mod_expires.c>
+ExpiresActive On
+ExpiresDefault "access plus 1 seconds"
+ExpiresByType application/javascript "access plus 6 months"
+ExpiresByType application/vnd.ms-fontobject "access plus 6 months"
+ExpiresByType application/xhtml+xml "access plus 10 minutes"
+ExpiresByType application/x-javascript "access plus 6 months"
+ExpiresByType application/x-shockwave-flash "access plus 6 months"
+ExpiresByType application/x-woff "access plus 6 months"
+ExpiresByType application/x-woff2 "access plus 6 months"
+ExpiresByType font/otf "access plus 6 months"
+ExpiresByType font/ttf "access plus 6 months"
+ExpiresByType image/gif "access plus 6 months"
+ExpiresByType image/jpeg "access plus 6 months"
+ExpiresByType image/png "access plus 6 months"
+ExpiresByType image/svg+xml "access plus 6 months"
+ExpiresByType image/x-icon "access plus 6 months"
+ExpiresByType text/css "access plus 6 months"
+ExpiresByType text/html "access plus 10 minutes"
+ExpiresByType text/javascript "access plus 6 months"
+ExpiresByType video/x-flv "access plus 6 months"
+</IfModule>
+
+<IfModule mod_headers.c>
+<FilesMatch "\\.(ico|jpe?g|png|gif|swf)$">
+Header set Cache-Control "max-age=14515200, public"
+</FilesMatch>
+<FilesMatch "\\.(css)$">
+Header set Cache-Control "max-age=14515200, public"
+</FilesMatch>
+<FilesMatch "\\.(js)$">
+Header set Cache-Control "max-age=14515200, public"
+</FilesMatch>
+<FilesMatch "\.(ttf|otf|eot|woff|woff2|svg)$">
+Header set Cache-Control "max-age=14515200, public"
+</FilesMatch>
+</IfModule>
+
+
+<ifModule mod_gzip.c>
+mod_gzip_on Yes
+mod_gzip_dechunk Yes
+mod_gzip_item_include file \.(html?|txt|css|js|php|pl)$
+mod_gzip_item_include mime ^application/x-javascript.*
+mod_gzip_item_include mime ^text/.*
+mod_gzip_item_exclude rspheader ^Content-Encoding:.*gzip.*
+mod_gzip_item_exclude mime ^image/.*
+mod_gzip_item_include handler ^cgi-script$
+</ifModule>
+## EXPIRES CACHING ##
+
+
+# BEGIN DEFLATE COMPRESSION
+<IfModule mod_deflate.c>
+# Compress HTML, CSS, JavaScript, Text, XML and fonts
+ AddOutputFilterByType DEFLATE application/javascript
+ AddOutputFilterByType DEFLATE application/rss+xml
+ AddOutputFilterByType DEFLATE application/vnd.ms-fontobject
+ AddOutputFilterByType DEFLATE application/x-font
+ AddOutputFilterByType DEFLATE application/x-font-opentype
+ AddOutputFilterByType DEFLATE application/x-font-otf
+ AddOutputFilterByType DEFLATE application/x-font-truetype
+ AddOutputFilterByType DEFLATE application/x-font-ttf
+ AddOutputFilterByType DEFLATE application/x-javascript
+ AddOutputFilterByType DEFLATE application/xhtml+xml
+ AddOutputFilterByType DEFLATE application/xml
+ AddOutputFilterByType DEFLATE font/opentype
+ AddOutputFilterByType DEFLATE font/otf
+ AddOutputFilterByType DEFLATE font/ttf
+ AddOutputFilterByType DEFLATE image/svg+xml
+ AddOutputFilterByType DEFLATE image/x-icon
+ AddOutputFilterByType DEFLATE text/css
+ AddOutputFilterByType DEFLATE text/html
+ AddOutputFilterByType DEFLATE text/javascript
+ AddOutputFilterByType DEFLATE text/plain
+ AddOutputFilterByType DEFLATE text/xml
+</IfModule>
+# END DEFLATE COMPRESSION
+
+
+# compress text, html, javascript, css, xml:
+AddOutputFilterByType DEFLATE text/plain
+AddOutputFilterByType DEFLATE text/html
+AddOutputFilterByType DEFLATE text/xml
+AddOutputFilterByType DEFLATE text/css
+AddOutputFilterByType DEFLATE application/xml
+AddOutputFilterByType DEFLATE application/xhtml+xml
+AddOutputFilterByType DEFLATE application/rss+xml
+AddOutputFilterByType DEFLATE application/javascript
+AddOutputFilterByType DEFLATE application/x-javascript
+
+
+#BEGIN EXPIRES HEADERS
+<IfModule mod_expires.c>
+# Enable expirations
+ExpiresActive On
+# Default expiration: 1 hour after request
+ExpiresDefault "now plus 1 hour"
+# CSS and JS expiration: 1 week after request
+ExpiresByType text/css "now plus 1 week"
+ExpiresByType application/javascript "now plus 1 week"
+ExpiresByType application/x-javascript "now plus 1 week"
+# Image files expiration: 1 month after request
+ExpiresByType image/bmp "now plus 1 month"
+ExpiresByType image/gif "now plus 1 month"
+ExpiresByType image/jpeg "now plus 1 month"
+ExpiresByType image/jp2 "now plus 1 month"
+ExpiresByType image/pipeg "now plus 1 month"
+ExpiresByType image/png "now plus 1 month"
+ExpiresByType image/svg+xml "now plus 1 month"
+ExpiresByType image/tiff "now plus 1 month"
+ExpiresByType image/vnd.microsoft.icon "now plus 1 month"
+ExpiresByType image/x-icon "now plus 1 month"
+ExpiresByType image/ico "now plus 1 month"
+ExpiresByType image/icon "now plus 1 month"
+ExpiresByType text/ico "now plus 1 month"
+ExpiresByType application/ico "now plus 1 month"
+# Webfonts
+ExpiresByType font/truetype "access plus 1 month"
+ExpiresByType font/opentype "access plus 1 month"
+ExpiresByType application/x-font-woff "access plus 1 month"
+ExpiresByType image/svg+xml "access plus 1 month"
+ExpiresByType application/vnd.ms-fontobject "access plus 1 month"
+</IfModule>
+#END EXPIRES HEADERS
+
+
+
+# BEGIN Cache-Control Headers
+<ifModule mod_headers.c>
+ <filesMatch "\.(ico|jpe?g|png|gif|swf)$">
+ Header set Cache-Control "max-age=2592000, public"
+ </filesMatch>
+ <filesMatch "\.(css)$">
+ Header set Cache-Control "max-age=604800, public"
+ </filesMatch>
+ <filesMatch "\.(js)$">
+ Header set Cache-Control "max-age=216000, private"
+ </filesMatch>
+ <filesMatch "\.(x?html?|php)$">
+ Header set Cache-Control "max-age=600, private, must-revalidate"
+ </filesMatch>
+</ifModule>
+# END Cache-Control Headers
+
+
+# ENABLE LITESPEED CACHE START
+<IfModule LiteSpeed>
+CacheEnable public
+RewriteEngine On
+RewriteCond %{REQUEST_METHOD} ^GET|HEAD$
+RewriteCond %{HTTP_HOST} ^sample.com|sample.net|sample.org [NC]
+RewriteCond %{REQUEST_URI} !login|admin|register|post|cron
+RewriteCond %{QUERY_STRING} !nocache
+RewriteRule .* - [E=Cache-Control:max-age=300]
+</IfModule>
+# ENABLE LITESPEED CACHE END
+
+
+<IfModule pagespeed_module>
+ModPagespeed on
+ModPagespeedEnableFilters rewrite_css,combine_css
+ModPagespeedEnableFilters recompress_images
+ModPagespeedEnableFilters convert_png_to_jpeg,convert_jpeg_to_webp
+ModPagespeedEnableFilters collapse_whitespace,remove_comments
+</IfModule>

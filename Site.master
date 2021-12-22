@@ -1,0 +1,284 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Site.master.cs" Inherits="Site" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml" lang="tr">
+<head runat="server">
+
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta name="description" content="İzmir Narin Tente Pergola Sistemleri , Bakım , Onarım ve Dekorasyon İşlemleri Adı Altında Çalışan Bir Firmadır. Evinizin , İşyerinizin , Yazlığınızın Güneşten Koruma İçin Yapılan , Brandası Kumaş , İplik veya İpekten Yapılan Gölgeleme Sistemidir."/>
+    <meta name="author" content="narintente.com" />
+    <meta name="owner" content="https://www.narintente.com" />
+    <meta http-equiv="x-dns-prefetch-control" content="on" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="Audience" content="All" />
+    <meta name="Coverage" content="Worldwide" />
+    <meta name="Distribution" content="Global" />
+    <meta name="Robots" content="All" />
+    <meta name="abstract" />
+    <meta name="topic" />
+    <meta name="summary" />
+    <meta name="keywords" content="İzmir tente, İzmir, pergola, kampanya, tente değişimi,montaj,dekorasyon,tasarım,dizayn,iç mekan tasarımı,boya,perde sistemleri,narin tente,pergola sistemleri,ucuz tente,branda,izmir tente,aydın tente,bodrum tente,çeşme tente,antalya tente,muğla,kütahya" />
+    
+    
+    <link rel="shortcut icon" href="assets/images/site_logo.png" type="image/png"/>
+   
+
+    <!--   Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Oswald:wght@200;300;400;500;600;700&family=Raleway&display=swap" rel="stylesheet">
+    
+    <link rel="preload" href="assets/webfonts/fa-brands-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/webfonts/fa-regular-400.woff2" as="font" type="font/woff2" crossorigin>
+    <link rel="preload" href="assets/webfonts/fa-solid-900.woff2" as="font" type="font/woff2" crossorigin>
+
+    <!-- Stylesheets -->
+    <link rel="stylesheet" href="assets/css/bootstrap.min.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/style.css" type="text/css">
+    <link rel="stylesheet" href="assets/css/responsive.css" type="text/css">
+
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div class="page-wrapper">
+
+      <div class="preloader"></div>
+
+       
+        <div class="form-back-drop"></div>
+
+        <header class="main-header">
+
+            <!-- header top -->
+            <div class="header-top">
+                <div class="container">
+                    <div class="top-inner">
+                        <div class="logo-outer">
+                            <div class="logo"><a href='<%#("index.aspx") %>Ev'><img src="assets/images/logo.png" alt="Logo" width="171" height="38"></a></div>
+                        </div>
+
+                        <ul class="header-info">
+                            <li>
+                                <i class="fas fa-map-marker-alt"></i>
+                                <h6><span>Addres:</span>
+                                    YEŞİLLİK CAD. MODEKA İŞ MERKEZİ NO:230/C KARABAĞLAR/İZMİR</h6>
+                            </li>
+                            <li>
+                                <i class="fas fa-phone-alt"></i>
+                                <h6><span>7/24 Arayabilirsiniz:</span>
+                                    <a href="tel:+905532505164">+90 553 250 51 64</a></h6>
+                            </li>
+                        </ul>
+
+                        <div class="languages">
+                            <select name="languages" id="languages">
+                                <option value="lang-1">Türkçe</option>
+                               
+                            </select>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <!--Header-Upper-->
+            <div class="header-upper">
+                <div class="container clearfix">
+
+                    <div class="header-inner">
+
+                        <div class="nav-outer clearfix">
+                            <!-- Main Menu -->
+                            <nav class="main-menu navbar-expand-lg">
+                                <div class="navbar-header clearfix">
+                                    <!-- Toggle Button -->
+                                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                        <span class="icon-bar"></span>
+                                    </button>
+                                </div>
+
+                                <div class="navbar-collapse collapse clearfix">
+                                    <ul class="navigation clearfix">
+                                        <li class="current"><a href='<%#("index.aspx") %>Ev'>Ev</a></li>
+                                        <li><a href='<%#("project.aspx") %>Projelerimiz'>projeler</a></li>
+                                        <li><a href='<%#("gallery.aspx") %>Foto-Galeri'>galeri</a></li>
+                                        <li><a href='<%#("about.aspx") %>Biz-Kimiz'>hakkımızda</a></li>
+                                        <li><a href='<%#("blog.aspx") %>Blog'>blog</a></li>
+                                        <li><a href='<%#("contact.aspx") %>İletisim'>iletişim</a></li>
+                                    </ul>
+                                </div>
+
+                            </nav>
+                            <!-- Main Menu End-->
+                        </div>
+
+                        <div class="menu-icons">
+                            <!-- Menu Serch Box-->
+                            
+
+                            <!-- menu sidbar -->
+                            <div class="menu-sidebar">
+                                <button>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                    <span class="icon-bar"></span>
+                                </button>
+                            </div>
+                        </div>
+
+                    </div>
+
+                </div>
+            </div>
+            <!--End Header Upper-->
+
+        </header>
+      
+        <div class="form-back-drop"></div>
+
+       
+        <section class="hidden-bar">
+            <div class="inner-box text-center">
+                <div class="cross-icon"><span class="fa fa-times"></span></div>
+                <div class="title">
+                    <h3>Benimle Bağlantı Sağlayın</h3>
+                </div>
+
+               
+                <div class="appointment-form">
+                    <form method="post" action="contact.aspx">
+                        <div class="form-group">
+                            <asp:TextBox ID="TextBox1" runat="server" placeholder="Adınız..."></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox ID="TextBox2" runat="server" placeholder="Email Adresiniz"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox ID="TextBox3" runat="server" placeholder="Telefon Numaranız" MaxLength="12"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            <asp:TextBox ID="TextBox4" runat="server" placeholder="Mesajınız Buraya Gelecek"></asp:TextBox>
+                        </div>
+                        <div class="form-group">
+                            
+                            <asp:Button runat="server" Text="Randevu Al" class="theme-btn" OnClick="Button1_Click"></asp:Button>
+                            <asp:Button ID="Button1" runat="server" Text="Reset" type="reset" class="theme-btn" OnClick="Button2_Click"></asp:Button>
+                                                <asp:Label ID="Label1" runat="server"></asp:Label>
+                        </div>
+                    </form>
+                </div>
+
+                
+                <div class="social-icons">
+                    <a href="https://www.facebook.com/omer.narinc" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                    <a href="https://www.instagram.com/omer_narinc/" target="_blank"><i class="fab fa-instagram"></i></a>
+                </div>
+            </div>
+        </section>
+       
+      
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+
+
+
+        <footer class="footer-section pt-220" style="background-image: url('assets/images/footer.png');">
+            <div class="container">
+                <div class="row align-items-center">
+                    <div class="col-xl-6 col-lg-8">
+                        <div class="instagram-posts">
+                            <div class="instagram-item">
+                                <img class="lazy" data-src="assets/images/projeandgallery/apartment1.jpg" src="assets/images/projeandgallery/blank-footer.jpg" alt="Tente Pergola" width="190" height="190">
+                                <div class="instagram-overlay">
+                                    <a href='<%#("gallery.aspx") %>Foto-Galeri'><i class="fas fa-image"></i></a>
+                                </div>
+                            </div>
+                            <div class="instagram-item">
+                                <img class="lazy" data-src="assets/images/projeandgallery/apartment2.jpg" src="assets/images/projeandgallery/blank-footer.jpg" alt="Tente Pergola" width="190" height="190">
+                                <div class="instagram-overlay">
+                                    <a href='<%#("gallery.aspx") %>Foto-Galeri'><i class="fas fa-image"></i></a>
+                                </div>
+                            </div>
+                            <div class="instagram-item">
+                                <img class="lazy" data-src="assets/images/projeandgallery/apartment3.jpg" src="assets/images/projeandgallery/blank-footer.jpg" alt="Tente Pergola" width="190" height="190">
+                                <div class="instagram-overlay">
+                                    <a href='<%#("gallery.aspx") %>Foto-Galeri'><i class="fas fa-image"></i></a>
+                                </div>
+                            </div>
+                            <div class="instagram-item">
+                                <img class="lazy" data-src="assets/images/projeandgallery/apartment4.jpg" src="assets/images/projeandgallery/blank-footer.jpg" alt="Tente Pergola" width="190" height="190">
+                                <div class="instagram-overlay">
+                                    <a href='<%#("gallery.aspx") %>Foto-Galeri'><i class="fas fa-image"></i></a>
+                                </div>
+                            </div>
+                            <div class="instagram-item">
+                                <img class="lazy" data-src="assets/images/projeandgallery/apartment5.jpg" src="assets/images/projeandgallery/blank-footer.jpg" alt="Tente Pergola" width="190" height="190">
+                                <div class="instagram-overlay">
+                                    <a href='<%#("gallery.aspx") %>Foto-Galeri'><i class="fas fa-image"></i></a>
+                                </div>
+                            </div>
+                            <div class="instagram-item">
+                                <img class="lazy" data-src="assets/images/projeandgallery/apartment6.jpg" src="assets/images/projeandgallery/blank-footer.jpg" alt="Tente Pergola" width="190" height="190">
+                                <div class="instagram-overlay">
+                                    <a href='<%#("gallery.aspx") %>Foto-Galeri'><i class="fas fa-image"></i></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xl-6 col-lg-4">
+                        <div class="contact-widget">
+                            <h3>İletişim</h3>
+                            <h6>Adreslerimizden veya Numaralarımızdan 7/24 Bizimle İletişim Sağlayabilirsiniz.</h6>
+                            <h6>YEŞİLLİK CAD. MODEKA İŞ MERKEZİ NO:230/C KARABAĞLAR/İZMİR</h6>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Footer Bottom Area-->
+            <div class="footer-bottom mt-55">
+               <div class="container">
+                   <div class="bottom-inner">
+                        <div class="social-icons">
+                            <a href="https://www.facebook.com/omer.narinc" target="_blank"><i class="fab fa-facebook-f"></i></a>
+                            <a href="https://www.instagram.com/omer_narinc/" target="_blank"><i class="fab fa-instagram"></i></a>
+                        </div>
+                       <div class="copyright">
+                            <p>© Copyright 2020 by Narinç Grup<a href="#">&nbsp&nbsp Narin Tente</a></p>
+                        </div>
+                   </div>
+               </div>
+            </div>
+
+        </footer>
+        
+
+    </div>
+
+                
+    
+    <div class="top-btn"><i class="fa fa-angle-up" id="top-btn"></i></div>
+
+
+    <script src="assets/js/jquery.min.js"></script>
+    <script src="assets/js/bootstrap.min.js"></script>
+    <script src="assets/js/jquery.nice-select.min.js"></script>
+    <script src="assets/js/jquery.magnific-popup.min.js"></script>
+    <script src="assets/js/leaflet.min.js"></script>
+    <script src="assets/js/leaflet-tilelayer-colorfilter.min.js"></script>
+    <script src="assets/js/owl.js"></script>
+    <script src="assets/js/wow.js"></script>
+    <script src="assets/js/appear.js"></script>
+    <script src="assets/js/script2.js"></script>
+    <script src="assets/js/script.js"></script>
+
+      
+    
+    </form>
+</body>
+</html>
